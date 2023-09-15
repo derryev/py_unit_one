@@ -12,11 +12,25 @@ turtle.forward(200)
 turtle.left(135)
 turtle.forward(490)
 turtle.end_fill()
-
-turtle.penup
+turtle.penup()
+turtle.forward(100)
+turtle.pendown()
 turtle.fillcolor(colB)
 turtle.begin_fill()
-
+turtle.right(45)
+turtle.forward(50)
+turtle.left(90)
+turtle.forward(150)
+turtle.left(90)
+turtle.forward(50)
+turtle.left(90)
+turtle.forward(10)
+turtle.left(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.forward(60)
+turtle.right(90)
+turtle.forward(40)
 
 
 turtle.exitonclick()
