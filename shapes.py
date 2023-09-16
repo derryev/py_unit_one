@@ -1,6 +1,6 @@
 # shapes.py
 # Eva D
-# sep 15, 2023
+# Sep 15, 2023
 # draws a circle, square, pentagon, and triangle with turtle
 
 import turtle
