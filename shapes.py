@@ -1,5 +1,11 @@
+# shapes.py
+# Eva D
+# sep 15, 2023
+# draws a circle, square, pentagon, and triangle with turtle
+
 import turtle
-# made functions with all the for loops so I could draw more shapes quickly if I wanted to
+# made functions with all the for loops so that I could draw more shapes quickly
+# if I wanted to, modeled after Bryan's square for loop function
 def draw_square(side_length, color):
     turtle.color(color)
     turtle.begin_fill()
