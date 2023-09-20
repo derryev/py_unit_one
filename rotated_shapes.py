@@ -4,7 +4,7 @@
 #rotates shapes in turtle
 
 import turtle
-turtle.speed(6)
+turtle.speed(0)
 
 def square_loop(side_length, color):
     turtle.color(color)
@@ -16,6 +16,21 @@ def square_loop(side_length, color):
             turtle.forward(side_length)
             turtle.left(90)
 
+def draw_diamond(side_length, color):
+    turtle.color(color)
+    for x in range (2):
+        turtle.forward(side_length)
+        turtle.left(60)
+        turtle.forward(side_length)
+        turtle.left(120)
+def draw_corner(side_length, color):
+    turtle.color(color)
+    for x in range (1):
+        turtle.forward(side_length)
+        turtle.left(60)
+        turtle.forward(side_length)
+        turtle.left(120)
+
 #write pen movement more quickly
 def move_pen(rotation, distance):
     turtle.penup()
@@ -23,28 +38,19 @@ def move_pen(rotation, distance):
     turtle.forward(distance)
     turtle.pendown()
 
-move_pen(0,-300)
+def draw_illusion(side_length, color):
 turtle.left(90)
-for x in range(2):
-    for x in range (2):
-        turtle.forward(50)
-        turtle.left(120)
-        turtle.forward(50)
-        turtle.left(60)
+for x in range(6):
+    draw_diamond(side_length, color)
+    turtle.goto(0,0)
+    turtle.left(60)
+turtle.goto(0,0)
+move_pen(330, 87)
+turtle.right(330)
+turtle.left(60)
+for x in range(6):
+    draw_corner(50,"skyblue")
     turtle.right(120)
-    for x in range(2):
-        turtle.forward(50)
-        turtle.left(120)
-        turtle.forward(50)
-        turtle.left(60)
-    turtle.right(120)
-    for x in range(1):
-        turtle.forward(50)
-        turtle.left(120)
-        turtle.forward(50)
-        turtle.left(60)
-
-
 
 
 
