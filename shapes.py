@@ -4,6 +4,8 @@
 # draws a circle, square, pentagon, and triangle with turtle
 
 import turtle
+
+turtle.speed(0)
 # made functions with all the for loops so that I could draw more shapes quickly
 # if I wanted to, modeled after Bryan's square for loop function
 def draw_square(side_length, color):
@@ -40,12 +42,24 @@ def draw_circle(side_length, color):
         turtle.left(10)
     turtle.end_fill()
 
+def draw_spiral(side_length, color):
+    turtle.color(color)
+    for x in range(40):
+        turtle.forward(side_length)
+        side_length = side_length - 2.5
+        turtle.left(90)
+    turtle.end_fill()
+
+
+
+
 # quicker way to move pen
 def move_pen(rotation, distance):
     turtle.penup()
     turtle.left(rotation)
     turtle.forward(distance)
     turtle.pendown()
+
 
 # moving pen and drawing square
 move_pen(0,-300)
@@ -63,5 +77,10 @@ draw_triangle(60, "purple")
 move_pen(0,150)
 draw_circle(6,"skyblue")
 
+move_pen(90, 250)
+move_pen(90, 400)
+
+draw_spiral(100, "violet")
 turtle.exitonclick()
+
 
