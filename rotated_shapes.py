@@ -15,7 +15,7 @@ def square_loop(side_length, color):
         for x in range (4):
             turtle.forward(side_length)
             turtle.left(90)
-
+#draws components of cube illusion
 def draw_diamond(side_length, color):
     turtle.color(color)
     for x in range (2):
@@ -30,6 +30,20 @@ def draw_corner(side_length, color):
         turtle.left(60)
         turtle.forward(side_length)
         turtle.left(120)
+#draws cube illusion
+def draw_illusion(side_length, color):
+    turtle.left(90)
+    for x in range(6):
+        draw_diamond(side_length, color)
+        turtle.goto(0,0)
+        turtle.left(60)
+    turtle.goto(0,0)
+    move_pen(330, 87)
+    turtle.right(330)
+    turtle.left(60)
+    for x in range(6):
+        draw_corner(side_length,color)
+        turtle.right(120)
 
 #write pen movement more quickly
 def move_pen(rotation, distance):
@@ -38,38 +52,8 @@ def move_pen(rotation, distance):
     turtle.forward(distance)
     turtle.pendown()
 
-def draw_illusion(side_length, color):
-    for x in range(6):
-        draw_diamond(50, "green")
-        turtle.goto(0,0)
-        turtle.left(60)
-turtle.goto(0,0)
-move_pen(330, 87)
-turtle.right(330)
-turtle.left(60)
-for x in range(6):
-    draw_corner(50,"skyblue")
-    turtle.right(120)
 
-
-
-
-
-
-
-def yikes(side_length, color):
-    turtle.left(90)
-    for x in range(6):
-        draw_diamond(side_length,color)
-        turtle.goto(0,0)
-        turtle.left(60)
-    turtle.goto(0,0)
-    move_pen(330, 87)
-    turtle.right(330)
-    turtle.left(60)
-    for x in range(6):
-        draw_corner(50,"skyblue")
-        turtle.right(120)
+draw_illusion(50, "violet")
 
 
 
