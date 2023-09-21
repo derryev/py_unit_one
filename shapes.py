@@ -50,7 +50,10 @@ def draw_spiral(side_length, color):
         turtle.left(90)
     turtle.end_fill()
 
-
+def draw_octagon(color):
+    for x in range (8):
+        turtle.forward(50)
+        turtle.left(45)
 
 
 # quicker way to move pen
@@ -80,7 +83,9 @@ draw_circle(6,"skyblue")
 move_pen(90, 250)
 move_pen(90, 400)
 
-draw_spiral(100, "violet")
+#draw_spiral(100, "violet")
+draw_octagon("blue")
+
 turtle.exitonclick()
 
 
