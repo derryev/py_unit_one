@@ -6,12 +6,12 @@
 import turtle
 
 #draws an octagon, takes parameter to make octagon a certain color when function is called
-def draw_octagon(color, side_length):
+def draw_octagon(color):
     turtle.color(color)
     turtle.begin_fill()
     #loop to draw octagon
     for x in range(8):
-        turtle.forward(side_length)
+        turtle.forward(100)
         turtle.left(45)
     turtle.end_fill()
 
