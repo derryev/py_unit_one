@@ -2,7 +2,7 @@
 # 9/21/23
 # Demonstrating properties of functions by drawing 4 octagons with turtle
 
-#imports turtle program which will be used to draw octagons
+#imports turtle program
 import turtle
 
 #draws an octagon, takes parameter to make octagon a certain color when function is called
